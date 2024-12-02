@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\logoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,5 @@ Route::get('/signin', [App\Http\Controllers\loginController::class,'signin'])->n
 Route::post('/signin',[App\Http\Controllers\loginController::class,'signinPost'])->name('signin-post');
 Route::get('/signup',[App\Http\Controllers\registerController::class,'signup'])->name('signUp');
 Route::post('/signup',[App\Http\Controllers\registerController::class,'signupPost'])->name('signUp-post');
+Route::post('/logout',[logoutController::class,'logout'])->name('logout');
 Route::get('',[App\Http\Controllers\homeController::class,'home'])->name('home');
